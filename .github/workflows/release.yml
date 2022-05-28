@@ -8,8 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ secrets.SECRET_TOKEN }}"
-    steps:
+      - name: echo SECRET_TOKEN
+        run: echo "${{ secrets.SECRET_TOKEN }}"
       - name: Check out repository
         uses: actions/checkout@v3.0.2
         id: tag_version
